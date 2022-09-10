@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background: #9CECFB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);  
+    background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); 
+    
+
+}
+::placeholder{
+    color: rgb(36, 34, 34);
+    font-size: 14px;
+    opacity: 0.6;
+}
+.text{
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: rgb(35, 44, 44);
+
+}
+
+#container{
+    width: 40%;
+    margin-left:30%;
+    margin-top: 3%;
+    padding: 20px;
+    border-radius: 5px;
+    background: #C9D6FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+
+}
+
+#page-heading{
+
+    height: 6%;
+    width: 100%;
+    border-bottom: 1px solid rgb(171, 164, 164);
+    text-align: center;
+    /* border: 1px solid red; */
+}
+#description{
+    padding: 1%;
+    border-bottom: 1px solid rgb(171, 164, 164);
+}
+
+#description:hover{
+    opacity: 0.8;
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#description input{
+    height: 5%;
+    width: 100%;
+    outline: transparent;
+    background: none;
+    border: transparent;
+    font-size: 18px;
+}
+
+#category-date-area{
+    display: flex;
+    height: 8%;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 5%;
+    border-bottom: 1px solid rgb(171, 164, 164);
+}
+#category-area{
+    height: auto;
+    width: 50%;
+    border-right: 1px solid rgb(171, 164, 164);
+    padding: 1%;
+}
+
+#category-area:hover{
+    opacity: 0.8;
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+#select-category{
+    height: 50%;
+    width: 95%;
+    margin-left: -3px;
+    outline: none;
+    background:transparent;
+    border: transparent;
+}
+
+
+#date-area{
+    height: auto;
+    width: 50%;
+    padding: 1%;
+
+}
+#date-area:hover{
+    opacity: 0.8;
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+#date-area input{
+    height: 50%;
+    width: 95%;
+    margin-left: -2px;
+    outline: none;
+    background:transparent;
+    border: transparent;
+}
+
+#button-area{
+    
+    height: 6%;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#add-task{
+    height: 100%;
+    width: 35%;
+    font-size: 12px;
+    background-color: grey;
+    color: whitesmoke;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#delete-task{
+    height: 100%;
+    width: 35%;
+    font-size: 12px;
+    background-color: rgb(159, 67, 67);
+    color: whitesmoke;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.print-list{
+    height: auto;
+    width: 100%;
+    /* border: 2px solid red; */
+    margin-top: 5%;
+    
+    
+}
+.list-of-todo{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid rgb(177, 172, 172);
+    background-color: #d2d7e5;
+    margin-top: 10px;
+    align-items: center;
+    
+}
+.list-of-todo:hover{
+    background-color: #979aa1;
+    border-radius: 6px;
+}
+
+
+.checkbox{
+    height: 20px;
+    width: 2%;
+    align-items: center;
+    margin-left: 4%;
+    font-size: 20px;
+}
+
+.des-day{
+    height: 60px;
+    width: 60%;
+    margin-left: 5%;
+    font-size: 16px;
+    font-weight: 600;
+}
+.des-day div{
+    display: flex;
+}
+.des-day div p{
+    margin-left: 8px;
+    /* margin-top: -2px; */
+    font-size: 13px;
+}
+
+.category{
+    height: 40px;
+    width: 15%;
+    text-align: center;
+    margin-left: 3%;
+    background: cadetblue;
+    border-radius: 5px;
+}
+.category p{
+    margin-top: 5px;
+}
+
+
+
+
+
+

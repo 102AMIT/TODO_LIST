@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+
+    <!-- adding font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- adding css file here -->
+    <link rel="stylesheet" href="/css/home.css" />
+</head>
+
+<body>
+    <form id="container">
+        <h1 id="page-heading">TODO APP</h1>
+
+        <div id="description">
+            <p class="text">DESCRIPTION</p>
+            <input type="text" name="description" placeholder="What do you need to do ?"/>
+        </div>
+
+        <div id="category-date-area">
+            <div id="category-area">
+                <p class="text">CATEGORY</p>
+                <select id="select-category" name="category">
+                    <option class="known" value="" disabled selected hidden>
+                        Choose a category
+                    </option>
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="Home">Home</option>
+                    <option value="Office">Office</option>
+                    <option value="School">School</option>
+                </select>
+            </div>
+            <div id="date-area">
+                <p class="text">Due Date</p>
+                <input name="date" type="date" />
+            </div>
+        </div>
+
+        <div id="button-area">
+            <button id="add-task" formaction="/creat" formmethod="post">
+                <i class="fa-solid fa-plus"></i>
+                ADD TASK
+            </button>
+            <button id="delete-task" formaction="/delete" formmethod="get">
+                <i class="fa-solid fa-trash"></i>
+                DELETE TASKS
+            </button>
+
+            <!-- try with anchor tag with difine the delete button seperatly the fucntion from the form because we need requied in input tag -->
+
+            <!-- <a id="delete-task" href="/delete/id" >
+                DELETE TASKS
+            </a> -->
+        </div>
+
+        <div class="print-list">
+            <% for(let i of task) { %>
+                <div class="list-of-todo">
+                    <div class="checkbox">
+                        <input type="checkbox" name="<%= i.id %>" />
+                    </div>
+                    <div class="des-day">
+                        <p id="task-description">
+                            <%= i.description %>
+                        </p>
+                        <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <p id="due-date">
+                                <%= i.date %>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <p id="task-category">
+                            <%= i.category %>
+                        </p>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </form>
+</body>
+
+</html>
