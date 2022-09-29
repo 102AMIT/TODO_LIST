@@ -1,6 +1,7 @@
 const express=require('express');//here we are include the express and uses functionality
 const app=express();//this is our express function we store in app variable for triggered the express
-const port=8000;//by default website run on port 80 but for now we set the to 8000.
+
+const port=process.env.PORT||8000;//by default website run on port 80 but for now we set the to 8000.
 
 // get mongobd
 const db=require('./config/mongoose');
@@ -61,7 +62,7 @@ app.get('/',function(req,res){
 
 app.get('/delete',function(req,res){
 
-    console.log(req.body);
+    // console.log(req.body);
     console.log(req.query);
     var length=Object.keys(req.query).length;
     // console.log(Object.keys(req.query)[2]);

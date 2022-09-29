@@ -2,7 +2,7 @@
 const mongoose=require('mongoose');
 
 //connect to the database
-mongoose.connect('mongodb://localhost/todo_app_db');
+mongoose.connect('mongodb+srv://amitkumarthakur:amit@cluster0.enj4bvf.mongodb.net/?retryWrites=true&w=majority');
 
 //define database acquire the connection (to check if it is successful)
 const db=mongoose.connection;
